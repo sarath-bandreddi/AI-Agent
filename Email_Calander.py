@@ -30,11 +30,6 @@ print("✅ Gmail tools loaded:", gmail_toolkit.get_tools())
 print("✅ Calendar tools loaded:", calendar_toolkit.get_tools())
 
 # ---------------- LLM Setup ----------------
-# llm = ChatGroq(
-#     model="meta-llama/llama-4-maverick-17b-128e-instruct",
-#     temperature=0,
-#     api_key="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"
-# )
 
 llm = init_chat_model("google_genai:gemini-2.5-flash", api_key="AIzaSyDSFL3U4sdcDvNdeUwuH2aWgqzLrEeB9Ck", temperature=0.0)
 

@@ -3,7 +3,6 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from langchain_google_community import CalendarToolkit
 from langchain_community.agent_toolkits.gmail.toolkit import GmailToolkit
-from langchain_groq import ChatGroq
 from langchain.agents import initialize_agent, AgentType
 
 def main():
@@ -17,7 +16,6 @@ def main():
     # from googleapiclient.discovery import build
     # from langchain_google_community import CalendarToolkit
     # from langchain_community.agent_toolkits.gmail.toolkit import GmailToolkit
-    # from langchain_groq import ChatGroq
     # from langchain.agents import initialize_agent, AgentType
     #
     # def main():
@@ -41,12 +39,6 @@ def main():
     #     print("✅ Gmail tools loaded:", gmail_toolkit.get_tools())
     #     print("✅ Calendar tools loaded:", calendar_toolkit.get_tools())
     #
-    #     # ---------------- LLM Setup ----------------
-    #     llm = ChatGroq(
-    #         model="deepseek-r1-distill-llama-70b",
-    #         temperature=0,
-    #         api_key="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"
-    #     )
     #
     #     # ---------------- Unified Agent ----------------
     #     agent = initialize_agent(
@@ -82,12 +74,7 @@ def main():
     print("✅ Gmail tools loaded:", gmail_toolkit.get_tools())
     print("✅ Calendar tools loaded:", calendar_toolkit.get_tools())
 
-    # ---------------- LLM Setup ----------------
-    llm = ChatGroq(
-        model="deepseek-r1-distill-llama-70b",
-        temperature=0,
-        api_key="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"
-    )
+    llm = None
 
     # ---------------- Unified Agent ----------------
     agent = initialize_agent(
